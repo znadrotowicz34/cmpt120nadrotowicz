@@ -2,8 +2,145 @@
 # Creates a basic calculator
 
 from graphics import *
-import math
+from math import *
 
 def main():
-    win = GraphWin("Test",350,350)
-    win.setBackgronud('light blue')
+
+    #create window
+    win = GraphWin("Calculator v0.1",300,400) 
+    win.setBackground('light blue')
+
+    #set numbers and symbols
+    rectangle1 = Rectangle(Point(40,80), Point(80,120))
+    rectangle1.setFill("black")
+    rectangle1.draw(win)
+    text7 = Text(Point(60,100), "7")
+    text7.setTextColor("white")
+    text7.setSize(18)
+    text7.draw(win)
+    
+    rectangle2 = Rectangle(Point(40,160), Point(80,200))
+    rectangle2.setFill("black")
+    rectangle2.draw(win)
+    text4 = Text(Point(60,180), "4")
+    text4.setTextColor("white")
+    text4.setSize(18)
+    text4.draw(win)
+
+    rectangle3 = Rectangle(Point(40,240), Point(80,280))
+    rectangle3.setFill("black")
+    rectangle3.draw(win)
+    text1 = Text(Point(60,260), "1")
+    text1.setTextColor("white")
+    text1.setSize(18)
+    text1.draw(win)
+
+    rectangle4 = Rectangle(Point(40,320), Point(80,360))
+    rectangle4.setFill("black")
+    rectangle4.draw(win)
+    text0 = Text(Point(60,340), "0")
+    text0.setTextColor("white")
+    text0.setSize(18)
+    text0.draw(win)
+
+    rectangle5 = Rectangle(Point(100,80), Point(140,120))
+    rectangle5.setFill("black")
+    rectangle5.draw(win)
+    text8 = Text(Point(120,100), "8")
+    text8.setTextColor("white")
+    text8.setSize(18)
+    text8.draw(win)
+
+    rectangle6 = Rectangle(Point(100,160), Point(140,200))
+    rectangle6.setFill("black")
+    rectangle6.draw(win)
+    text5 = Text(Point(120,180), "5")
+    text5.setTextColor("white")
+    text5.setSize(18)
+    text5.draw(win)
+
+    rectangle7 = Rectangle(Point(100,240), Point(140,280))
+    rectangle7.setFill("black")
+    rectangle7.draw(win)
+    text2 = Text(Point(120,260), "2")
+    text2.setTextColor("white")
+    text2.setSize(18)
+    text2.draw(win)
+
+    rectangle8 = Rectangle(Point(100,320), Point(140,360))
+    rectangle8.setFill("black")
+    rectangle8.draw(win)
+    textDot = Text(Point(120,340), ".")
+    textDot.setTextColor("white")
+    textDot.setSize(18)
+    textDot.draw(win)
+
+    rectangle9 = Rectangle(Point(160,80), Point(200,120))
+    rectangle9.setFill("black")
+    rectangle9.draw(win)
+    text9 = Text(Point(180,100), "9")
+    text9.setTextColor("white")
+    text9.setSize(18)
+    text9.draw(win)
+
+    rectangle10 = Rectangle(Point(160,160), Point(200,200))
+    rectangle10.setFill("black")
+    rectangle10.draw(win)
+    text6 = Text(Point(180,180), "6")
+    text6.setTextColor("white")
+    text6.setSize(18)
+    text6.draw(win)
+
+    rectangle11 = Rectangle(Point(160,240), Point(200,280))
+    rectangle11.setFill("black")
+    rectangle11.draw(win)
+    text3 = Text(Point(180,260), "3")
+    text3.setTextColor("white")
+    text3.setSize(18)
+    text3.draw(win)
+
+    rectangle12 = Rectangle(Point(160,320), Point(200,360))
+    rectangle12.setFill("red")
+    rectangle12.draw(win)
+    textEqual = Text(Point(180,340), "=")
+    textEqual.setTextColor("white")
+    textEqual.setSize(18)
+    textEqual.draw(win)
+
+    rectangle13 = Rectangle(Point(220,80), Point(260,120))
+    rectangle13.setFill("green")
+    rectangle13.draw(win)
+    textDivide = Text(Point(240,100), "/")
+    textDivide.setTextColor("white")
+    textDivide.setSize(18)
+    textDivide.draw(win)
+
+    rectangle14 = Rectangle(Point(220,160), Point(260,200))
+    rectangle14.setFill("green")
+    rectangle14.draw(win)
+    textMultiply = Text(Point(240,180), "*")
+    textMultiply.setTextColor("white")
+    textMultiply.setSize(18)
+    textMultiply.draw(win)
+
+    rectangle15 = Rectangle(Point(220,240), Point(260,280))
+    rectangle15.setFill("green")
+    rectangle15.draw(win)
+    textSubtraction = Text(Point(240,260), "-")
+    textSubtraction.setTextColor("white")
+    textSubtraction.setSize(18)
+    textSubtraction.draw(win)
+
+    rectangle16 = Rectangle(Point(220,320), Point(260,360))
+    rectangle16.setFill("green")
+    rectangle16.draw(win)
+    textAddition = Text(Point(240,340), "+")
+    textAddition.setTextColor("white")
+    textAddition.setSize(18)
+    textAddition.draw(win)
+
+    rectangle17 = Rectangle(Point(40,10), Point(260,60))
+    rectangle17.setFill("white")
+    rectangle17.draw(win)
+    
+main()
