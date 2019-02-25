@@ -7,11 +7,13 @@ def main():
     n = eval(input("Enter the number of terms to sum:"))
 
     pi = 0
-    for i in range (1, n+1, 2):
-        pi += 4 / i - 4 / (i+2)
+    sign = 1
+    for i in range (1, n*2, 2):
+        pi += sign * (4 / i)
+        sign = -sign
     print (pi)
 
-    print (pi-math.pi)
+    print (math.pi - pi)
     
     
     
