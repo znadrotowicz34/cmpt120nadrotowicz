@@ -4,6 +4,15 @@
 # Created: 2019-02-25
     # get user's first and last names
 
+def notStrong(passwd):
+    if len(passwd) < 8:
+        return True
+    elif passwd.lower() == passwd:
+        return True
+    elif passwd.upper() == passwd:
+        return True
+    else:
+        return False
 
 def getName():
     first = input("Enter your first name: ")
@@ -11,16 +20,15 @@ def getName():
     return [first,last]
     # TODO modify this to generate a Marist-style username
 def maristUname(name):
-    uname = name[0] + "." + name[1]
+    uname = (name[0] + "." + name[1]).lower()
     return uname
     # ask user to create a new password
 def getPasswd():
     passwd = input("Create a new password: ")
     # TODO modify this to ensure the password has at least 8 characters
-    while not len(passwd) >= 8:
-         if len(passwd) < 8:
-            print("Fool of a Took! That password is feeble!")
-            passwd = input("Create a new password: ")  
+    while notStrong(passwd):
+        print("Fool of a Took! That password is feeble!")
+        passwd = input("Create a new password: ")
     return passwd
           
                        
