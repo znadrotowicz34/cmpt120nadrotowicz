@@ -145,5 +145,4 @@ def main():
     answerText = Text(Point(250,162.5),"The answer is " + str(number3))
     answerText.draw(win)
 
-    
-main()
+main()    
