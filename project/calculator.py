@@ -2,10 +2,9 @@
 #creates the GUI for the calculator
 
 from graphics import *
-from math import *
-import calc_functions
-
-def calculator():
+from calc_functions import *
+ 
+def calculatorGUI():
     #create window
     win = GraphWin("Calculator",500,200)
     win.setBackground('light blue')
@@ -21,7 +20,8 @@ def calculator():
 
     equationBox = Entry(Point(250,120),20)
     equationBox.draw(win)
-
+    
+    
     readyButton = Rectangle(Point(200,150),Point(300,175))
     readyButton.setFill('black')
     readyButton.draw(win)
@@ -31,14 +31,19 @@ def calculator():
     calculateText.draw(win)
 
     #calculate equation on GUI
-
     win.getMouse()
-    
+
+    equationText = equationBox.getText()
     calculateText.undraw()
     readyButton.undraw()
     
-    answerText = Text(Point(250,162.5),"The answer is " + str(calc_Functions.number3))
-    answerText.draw(win)
-    print(calc_Functions.number3)
+    answer = calculateAnswer(equationText)
 
-calculator()
+    answerText = Text(Point(250,162.5),"The answer is " + str(answer))
+    answerText.draw(win)
+
+    
+def main():
+    calculatorGUI()
+main()
+    

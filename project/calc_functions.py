@@ -1,41 +1,40 @@
 #calc_functions.py
 #stores all calculator functions
 
-from graphics import *
 from math import *
-import calculator
 
-def calc_Functions():
+def calculateAnswer(inputText):
 
-    calculator.equationText = calculator.equationBox.getText()
+    equationList = inputText.rsplit()
+    #print(equationList)
 
-    equationList = equationText.rsplit()
-    print(equationList)
+    keepGoing = 1
     
-    while True:
+    
+    while keepGoing == 1:
         multiplyDivideFlag = 0
         try:
             multiplyPosition = equationList.index("*")
         except ValueError:
-            multiplyPosition = 9999
+            multiplyPosition = 99999999
         try:
             dividePosition = equationList.index("/")
         except ValueError:
-            dividePosition = 9999
+            dividePosition = 99999999
         try:
             addPosition = equationList.index("+")
         except ValueError:
-            addPosition = 9999
+            addPosition = 99999999
         try:
             subtractPosition = equationList.index("-")
         except ValueError:
-            subtractPosition = 9999
+            subtractPosition = 99999999
         
 
-        print(multiplyPosition)
-        print(dividePosition)
-        print(addPosition)
-        print(subtractPosition)
+        #print(multiplyPosition)
+        #print(dividePosition)
+        #print(addPosition)
+        #print(subtractPosition)
     
         if dividePosition > multiplyPosition:
             print("Multiply")
@@ -54,9 +53,8 @@ def calc_Functions():
             print(equationList)
             #print("the list is now" + str(equationList))
             if len(equationList) == 1:
-                #print("this should be right")
                 print(equationList)
-                break
+                keepGoing = 0
         elif multiplyPosition > dividePosition:
             print("Divide")
             multiplyDivideFlag = 1
@@ -71,8 +69,11 @@ def calc_Functions():
             equationList.insert(dividePosition - 1,number3)
             print(equationList)
             if len(equationList) == 1:
-                print(equationList)
-                break
+              print(equationList)
+              keepGoing = 0
+
+
+                
 
         if multiplyDivideFlag != 1:
 
@@ -90,7 +91,7 @@ def calc_Functions():
                 print(equationList)
                 if len(equationList) == 1:
                     print(equationList)
-                    break
+                    keepGoing = 0
             elif addPosition > subtractPosition:
                 print("Subtract")
                 number1 = equationList[subtractPosition - 1]
@@ -105,6 +106,8 @@ def calc_Functions():
                 print(equationList)
                 if len(equationList) == 1:
                     print(equationList)
-                    break
+                    keepGoing = 0
 
-calc_Functions()
+        
+    return number3
+
