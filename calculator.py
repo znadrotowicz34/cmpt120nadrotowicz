@@ -306,7 +306,7 @@ def main():
             resetBox.setFill("white")
             resetBox.draw(win)
             equationString = ""
-            stringLength = 0
+            stringLength = -2
             print("delete")
             print(equationString)
         elif ur > 160 and ur < 200 and ll > 320 and ll < 360:
