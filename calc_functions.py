@@ -7,7 +7,10 @@ def calculateAnswer(inputText):
 
     #take equation from user
     equationList = inputText.rsplit()
+<<<<<<< HEAD
     print(equationList)
+=======
+>>>>>>> ad816677cbb00d079f81b8d070f1697bdd5f556f
     
     #sets variable for while loop
     keepGoing = 1
@@ -93,4 +96,3 @@ def calculateAnswer(inputText):
 
     #return answer to user    
     return number3
-
