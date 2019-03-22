@@ -46,4 +46,7 @@ def calculatorGUI():
 def main():
     calculatorGUI()
 main()
+<<<<<<< HEAD
     
+=======
+>>>>>>> ad816677cbb00d079f81b8d070f1697bdd5f556f
