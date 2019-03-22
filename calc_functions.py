@@ -7,6 +7,7 @@ def calculateAnswer(inputText):
 
     #take equation from user
     equationList = inputText.rsplit()
+    print(equationList)
     
     #sets variable for while loop
     keepGoing = 1
