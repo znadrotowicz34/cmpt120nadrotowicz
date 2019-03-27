@@ -7,8 +7,12 @@ def main():
 
     while animalCorrect == 0:
         animal = input("I am thinking of an animal. What animal am I thinking of?")
-        if animal == "Panda":
+        answer = animal.lower()
+        if answer == "panda":
             print("Correct!")
+            animalCorrect = 1
+        elif answer == "Quit" or answer == "quit":
+            print("You have quit the game.")
             animalCorrect = 1
         else:
             print("Wrong animal")
