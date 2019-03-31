@@ -5,6 +5,7 @@ from math import *
 
 def calculateAnswer(inputText):
 
+<<<<<<< HEAD
     #take equation from user
     equationList = inputText.rsplit()
     
@@ -12,28 +13,59 @@ def calculateAnswer(inputText):
     keepGoing = 1
     
     #while loop
+=======
+<<<<<<< HEAD
+    equationList = inputText.rsplit()
+    #print(equationList)
+
+    keepGoing = 1
+    
+    
+=======
+    #take equation from user
+    equationList = inputText.rsplit()
+    
+    #sets variable for while loop
+    keepGoing = 1
+    
+    #while loop
+>>>>>>> ad816677cbb00d079f81b8d070f1697bdd5f556f
+>>>>>>> 345c98bd3ea1d638e9b7aaf34f23e665215fb02e
     while keepGoing == 1:
         multiplyDivideFlag = 0
         try:
             multiplyPosition = equationList.index("*")
         except ValueError:
-            multiplyPosition = 9999
+            multiplyPosition = 99999999
         try:
             dividePosition = equationList.index("/")
         except ValueError:
-            dividePosition = 9999
+            dividePosition = 99999999
         try:
             addPosition = equationList.index("+")
         except ValueError:
-            addPosition = 9999
+            addPosition = 99999999
         try:
             subtractPosition = equationList.index("-")
         except ValueError:
-            subtractPosition = 9999
+            subtractPosition = 99999999
         
 
+<<<<<<< HEAD
         
         #multiplication
+=======
+<<<<<<< HEAD
+        #print(multiplyPosition)
+        #print(dividePosition)
+        #print(addPosition)
+        #print(subtractPosition)
+    
+=======
+        
+        #multiplication
+>>>>>>> ad816677cbb00d079f81b8d070f1697bdd5f556f
+>>>>>>> 345c98bd3ea1d638e9b7aaf34f23e665215fb02e
         if dividePosition > multiplyPosition:
             print("Multiply")
             multiplyDivideFlag = 1
@@ -45,8 +77,17 @@ def calculateAnswer(inputText):
             #print("inserting " + str(number3) + "at index " + str(multiplyPosition - 1))
             equationList.insert(multiplyPosition - 1,number3)
             if len(equationList) == 1:
+<<<<<<< HEAD
                 #the following line is there to test if the equation list was proper
                 #print(equationList)
+=======
+<<<<<<< HEAD
+                print(equationList)
+=======
+                #the following line is there to test if the equation list was proper
+                #print(equationList)
+>>>>>>> ad816677cbb00d079f81b8d070f1697bdd5f556f
+>>>>>>> 345c98bd3ea1d638e9b7aaf34f23e665215fb02e
                 keepGoing = 0
         elif multiplyPosition > dividePosition:
             print("Divide")
@@ -58,11 +99,27 @@ def calculateAnswer(inputText):
             #print("inserting " + str(number3) + "at index " + str(dividePosition - 1))
             equationList.insert(dividePosition - 1,number3)
             if len(equationList) == 1:
+<<<<<<< HEAD
               #print(equationList)
               keepGoing = 0
         #division 
 
                 
+=======
+<<<<<<< HEAD
+              print(equationList)
+              keepGoing = 0
+
+
+                
+=======
+              #print(equationList)
+              keepGoing = 0
+        #division 
+>>>>>>> ad816677cbb00d079f81b8d070f1697bdd5f556f
+
+                
+>>>>>>> 345c98bd3ea1d638e9b7aaf34f23e665215fb02e
         #tests to see if the string no longer has multiplication or division
         if multiplyDivideFlag != 1:
 
@@ -76,7 +133,15 @@ def calculateAnswer(inputText):
                 #print("inserting " + str(number3) + "at index " + str(addPosition - 1))
                 equationList.insert(addPosition - 1,number3)
                 if len(equationList) == 1:
+<<<<<<< HEAD
                     #print(equationList)
+=======
+<<<<<<< HEAD
+                    print(equationList)
+=======
+                    #print(equationList)
+>>>>>>> ad816677cbb00d079f81b8d070f1697bdd5f556f
+>>>>>>> 345c98bd3ea1d638e9b7aaf34f23e665215fb02e
                     keepGoing = 0
             elif addPosition > subtractPosition:
                 print("Subtract")
@@ -87,8 +152,23 @@ def calculateAnswer(inputText):
                 #print("inserting " + str(number3) + "at index " + str(subtractPosition - 1))
                 equationList.insert(subtractPosition - 1,number3)
                 if len(equationList) == 1:
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                    print(equationList)
+                    keepGoing = 0
+
+        
+    return number3
+
+=======
+>>>>>>> 345c98bd3ea1d638e9b7aaf34f23e665215fb02e
                     #print(equationList)
                     keepGoing = 0
 
     #return answer to user    
     return number3
+<<<<<<< HEAD
+=======
+>>>>>>> ad816677cbb00d079f81b8d070f1697bdd5f556f
+>>>>>>> 345c98bd3ea1d638e9b7aaf34f23e665215fb02e
